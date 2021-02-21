@@ -1,9 +1,8 @@
-import { Injectable } from "@nestjs/common"
+import { Injectable } from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
-import { AstronautType } from "./dto/create-astronaut.dto";
-import { AstronautInput } from "./inputs/astronaut.input";
-import { Astronaut } from "./interfaces/astronaut.interface";
+import { AstronautInput } from "../domain/inputs";
+import { Astronaut } from "../domain/interfaces";
 
 @Injectable()
 export class AstronautService {

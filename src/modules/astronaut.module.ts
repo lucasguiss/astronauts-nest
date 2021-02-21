@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
 import { MongooseModule } from "@nestjs/mongoose";
-import { AstronautResolver } from "./astronaut.resolver";
-import { AstronautSchema } from "./astronaut.schema";
-import { AstronautService } from "./astronaut.service";
+import { AstronautService } from "../services";
+import { AstronautResolver } from "../resolvers";
+import { AstronautSchema } from "../schema";
 
 @Module({
     providers: [

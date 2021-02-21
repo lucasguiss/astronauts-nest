@@ -1,8 +1,8 @@
 import { Args, Mutation, Query, Resolver } from "@nestjs/graphql";
-import { AstronautService } from "./astronaut.service";
-import { AstronautType } from "./dto/create-astronaut.dto";
-import { AstronautInput } from "./inputs/astronaut.input";
-import { Astronaut } from "./interfaces/astronaut.interface";
+import { Astronaut } from "../domain/interfaces";
+import { AstronautService } from "../services";
+import { CreateAstronaut } from "../domain/dto";
+import { AstronautInput } from "../domain/inputs";
 
 @Resolver()
 export class AstronautResolver {
@@ -16,12 +16,12 @@ export class AstronautResolver {
         return 'Hello world'
     }
 
-    @Query(() => [AstronautType])
+    @Query(() => [CreateAstronaut])
     async findAllAstronauts(): Promise<Array<Astronaut>> {
         return this.astronautService.findAll()
     }
 
-    @Mutation(() => AstronautType)
+    @Mutation(() => CreateAstronaut)
     async createAstronaut(@Args('input') input: AstronautInput) {
         return this.astronautService.create(input)
     }

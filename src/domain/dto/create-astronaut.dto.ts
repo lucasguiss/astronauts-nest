@@ -1,8 +1,7 @@
-import { ID } from "@nestjs/graphql"
-import { Field, Int, ObjectType } from "type-graphql"
+import { Field, Int, ObjectType, ID } from "@nestjs/graphql"
 
 @ObjectType()
-export class AstronautType {
+export class CreateAstronaut {
     
     @Field(() => ID)
     readonly id: string
