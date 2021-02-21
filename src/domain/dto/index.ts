@@ -1,0 +1,1 @@
+export { CreateAstronaut } from './create-astronaut.dto'

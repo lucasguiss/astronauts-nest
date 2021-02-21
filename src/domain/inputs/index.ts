@@ -1,0 +1,1 @@
+export { AstronautInput } from './astronaut.input'

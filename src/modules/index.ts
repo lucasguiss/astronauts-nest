@@ -1,0 +1,1 @@
+export { AstronautModule } from './astronaut.module'

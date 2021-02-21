@@ -1,0 +1,1 @@
+export { AstronautResolver } from './astronaut.resolver'
